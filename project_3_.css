@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+}
+body
+{
+    overflow:hidden;
+    background-color: black;
+    animation: shake_complete_page linear 3s infinite;
+}
+.city_background
+{
+   
+    background-image: url('city_background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width:100%;
+    height:100vh;
+}
+.car
+{
+    height:320px;
+    width:520px;
+    background-image: url('car.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top:62vh;
+    left:5vw;
+    animation: shake linear 3s infinite;
+}
+.track
+{
+    height: 320px;
+    width: 800vw;
+    background-image: url('track.png');
+    background-repeat:repeat-x;
+    /* background-size: cover; */
+    position: relative;
+    top: 33vh;
+    left: -3vw;
+    animation: trackmove linear 9s infinite;
+   
+}
+.wheel_left img
+{
+    width: 61px;
+    position: relative;
+    top: 169px;
+    left: 127px;
+    animation: wheelrotation linear .6s infinite;
+}
+.wheel_right img
+{
+    width: 64px;
+    position: relative;
+    top: 99px;
+    left: 325px;
+    animation: wheelrotation linear .6s infinite;
+}
+/* For rotating the car wheel. */
+@keyframes wheelrotation
+{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+/* For moving the track backward , so that it looks like ar is moving fastly. */
+@keyframes trackmove
+{
+    100%{
+        transform: translateX(-500vw);
+    }
+}
+/* For shaking the car little bit up-down so that , it looks like moving one. */
+@keyframes shake
+{
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+/* For shaking the complete page little bit up-down so that , complete background looks like moving one. */
+@keyframes shake_complete_page
+{
+    0%{
+        transform: translateY(-10px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
